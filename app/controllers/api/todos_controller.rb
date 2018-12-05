@@ -1,5 +1,4 @@
-class TodosController < ApplicationController
-
+class Api::TodosController < ApplicationController
   def show
     render json: Todo.find(params[:id])
   end
@@ -15,7 +14,7 @@ class TodosController < ApplicationController
   end
 
   def index
-
+    render json: Todo.all
   end
 
   def destroy
